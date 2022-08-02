@@ -79,7 +79,7 @@ let Round = class
     { 
         for ( let i = 0; i < 5; i++ )
         {
-            const playerSelection = "Rock";
+            const playerSelection = prompt("Choose Rock, Paper, or Scissors");
             const computerSelection = this.getComputerChoice();
             round.playRound(playerSelection, computerSelection); 
             console.log(this.playerPoints);
@@ -88,9 +88,13 @@ let Round = class
         {
             console.log("You Win the MattGame");
         }
-        else
+        else if ( this.playerPoints < this.computerPoints )
         {
             console.log("You Lose the CalvinGame");
+        }
+        else
+        {
+            console.log("Draw");
         }
     }
 }
