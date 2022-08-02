@@ -77,13 +77,10 @@ let Round = class
 
     game()
     { 
-        for ( let i = 0; i < 5; i++ )
-        {
-            const playerSelection = prompt("Choose Rock, Paper, or Scissors");
-            const computerSelection = this.getComputerChoice();
-            round.playRound(playerSelection, computerSelection); 
-            console.log(this.playerPoints);
-        }
+        const playerSelection = prompt("Choose Rock, Paper, or Scissors");
+        const computerSelection = this.getComputerChoice();
+        round.playRound(playerSelection, computerSelection); 
+        console.log(this.playerPoints);
         if ( this.playerPoints >  this.computerPoints )
         {
             console.log("You Win the MattGame");
@@ -102,3 +99,7 @@ let Round = class
 let round = new Round(0, 0);
 round.game()
 
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', () => {
+    
+}); 
