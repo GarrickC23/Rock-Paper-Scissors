@@ -60,7 +60,7 @@ function game(userChoice)
     {
         case "rs":
         case "pr":
-        case "sr":
+        case "sp":
             win(userChoice, computerChoice);
             break;
         case "rp":
